@@ -38,13 +38,13 @@ export function ReportExplorer({ usdcReports, eurcReports }: Props) {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <span className="text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+        <span className="text-xs font-medium uppercase tracking-widest text-zinc-500">
           Token
         </span>
         <div
           role="tablist"
           aria-label="Token"
-          className="inline-flex w-fit rounded-lg border border-zinc-200 bg-zinc-100 p-1 dark:border-zinc-700 dark:bg-zinc-800"
+          className="inline-flex w-fit rounded-lg border border-zinc-200 bg-zinc-100 p-1"
         >
           {(["usdc", "eurc"] as const).map((k) => {
             const active = k === kind;
@@ -58,8 +58,8 @@ export function ReportExplorer({ usdcReports, eurcReports }: Props) {
                 onClick={() => setKind(k)}
                 className={`inline-flex min-w-[88px] items-center justify-center gap-2 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
                   active
-                    ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-700 dark:text-zinc-50"
-                    : "text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
+                    ? "bg-white text-zinc-900 shadow-sm"
+                    : "text-zinc-500 hover:text-zinc-700"
                 }`}
               >
                 <Image

@@ -37,10 +37,10 @@ export function ReportPicker({ kind, reports }: Props) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-2 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none dark:ring-1 dark:ring-white/5">
+      <div className="flex flex-col gap-2 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm">
         <label
           htmlFor="report-select"
-          className="text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400"
+          className="text-xs font-medium uppercase tracking-widest text-zinc-500"
         >
           Report
         </label>
@@ -48,7 +48,7 @@ export function ReportPicker({ kind, reports }: Props) {
           id="report-select"
           value={reportKey}
           onChange={(e) => setReportKey(e.target.value)}
-          className="w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm focus:border-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:focus:border-zinc-600 dark:focus:ring-zinc-800"
+          className="w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm focus:border-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-200"
         >
           {reports.map((r) => (
             <option key={keyOf(r)} value={keyOf(r)}>
@@ -60,13 +60,13 @@ export function ReportPicker({ kind, reports }: Props) {
 
       {selected ? (
         <>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">
+          <p className="text-xs text-zinc-500">
             Source:{" "}
             <a
               href={selected.localPdf}
               target="_blank"
               rel="noreferrer"
-              className="underline decoration-dotted underline-offset-2 hover:text-zinc-700 dark:hover:text-zinc-300"
+              className="underline decoration-dotted underline-offset-2 hover:text-zinc-700"
             >
               {selected.format === "deloitte" ? "Deloitte" : "Grant Thornton"} examination report (PDF)
             </a>
@@ -75,7 +75,7 @@ export function ReportPicker({ kind, reports }: Props) {
               href={selected.sourceUrl}
               target="_blank"
               rel="noreferrer"
-              className="underline decoration-dotted underline-offset-2 hover:text-zinc-700 dark:hover:text-zinc-300"
+              className="underline decoration-dotted underline-offset-2 hover:text-zinc-700"
             >
               original on circle.com
             </a>
@@ -102,7 +102,7 @@ export function ReportPicker({ kind, reports }: Props) {
           </div>
         </>
       ) : (
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-500">
           No reports with detailed composition for {kind.toUpperCase()}.
         </p>
       )}
