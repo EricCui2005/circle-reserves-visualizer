@@ -39,6 +39,10 @@ yarn-error.log*
 # original source PDF kept locally only; duplicated under public/pdfs/
 /source/
 
+# parser run summary — contains a generatedAt timestamp that would otherwise
+# show as a daily diff and trigger false-positive "new report" emails
+/data/reports/_index.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
