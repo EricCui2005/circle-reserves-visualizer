@@ -1,0 +1,36 @@
+{
+  "kind": "eurc",
+  "year": 2024,
+  "month": 6,
+  "format": "deloitte",
+  "reportDates": [
+    "2024-06-10",
+    "2024-06-28"
+  ],
+  "series": [
+    {
+      "date": "2024-06-10",
+      "circulation": 36571038,
+      "reserveTotal": 37322087,
+      "composition": {
+        "treasuries": 0,
+        "repos": 0,
+        "cashInFund": 0,
+        "cashAtBanks": 37322364,
+        "totalReserveFund": null,
+        "totalOther": null,
+        "totalReserveAssets": null
+      }
+    },
+    {
+      "date": "2024-06-28",
+      "circulation": 35434916,
+      "reserveTotal": 36186236,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/eurc/2024-06.pdf",
+  "localPdf": "/pdfs/eurc/2024-06.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/EURC%20Attestations/2024%20EURC_Examination%20Report%20June%202024.pdf"
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "usdc",
+  "year": 2021,
+  "month": 7,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2021-07-30"
+  ],
+  "series": [
+    {
+      "date": "2021-07-30",
+      "circulation": 27312456821,
+      "reserveTotal": 27312456821,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2021-07.pdf",
+  "localPdf": "/pdfs/usdc/2021-07.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2021/2021%20USDC%20Circle%20Grant%20Thornton%20Report%20July.pdf"
+}

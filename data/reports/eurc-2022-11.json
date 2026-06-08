@@ -1,0 +1,21 @@
+{
+  "kind": "eurc",
+  "year": 2022,
+  "month": 11,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2022-11-30"
+  ],
+  "series": [
+    {
+      "date": "2022-11-30",
+      "circulation": 25573100,
+      "reserveTotal": 25573100,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/eurc/2022-11.pdf",
+  "localPdf": "/pdfs/eurc/2022-11.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/Euro%20Coin%20Attestations/EUROC%202022_Circle%20Examination%20Report%20November%202022.pdf"
+}

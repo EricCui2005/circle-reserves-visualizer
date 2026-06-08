@@ -1,0 +1,44 @@
+{
+  "kind": "usdc",
+  "year": 2023,
+  "month": 11,
+  "format": "deloitte",
+  "reportDates": [
+    "2023-11-16",
+    "2023-11-30"
+  ],
+  "series": [
+    {
+      "date": "2023-11-16",
+      "circulation": 24023839814,
+      "reserveTotal": 24075758343,
+      "composition": {
+        "treasuries": 7011931098,
+        "repos": 14375000000,
+        "cashInFund": 999159493,
+        "cashAtBanks": 1749906241,
+        "totalReserveFund": 22338075917,
+        "totalOther": 1737682426,
+        "totalReserveAssets": 24075758343
+      }
+    },
+    {
+      "date": "2023-11-30",
+      "circulation": 24477366310,
+      "reserveTotal": 24529287113,
+      "composition": {
+        "treasuries": 7167169630,
+        "repos": 14564000000,
+        "cashInFund": 1003641646,
+        "cashAtBanks": 1902038972,
+        "totalReserveFund": 22637983894,
+        "totalOther": 1891303219,
+        "totalReserveAssets": 24529287113
+      }
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2023-11.pdf",
+  "localPdf": "/pdfs/usdc/2023-11.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2023/2023%20USDC_Circle%20Examination%20Report%20November%202023.pdf"
+}

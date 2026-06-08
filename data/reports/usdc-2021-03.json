@@ -1,0 +1,21 @@
+{
+  "kind": "usdc",
+  "year": 2021,
+  "month": 3,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2021-03-31"
+  ],
+  "series": [
+    {
+      "date": "2021-03-31",
+      "circulation": 11141404000,
+      "reserveTotal": 100000,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2021-03.pdf",
+  "localPdf": "/pdfs/usdc/2021-03.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2021/2021%20USDC%20Circle%20Grant%20Thornton%20Report%20March.pdf"
+}

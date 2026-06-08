@@ -1,0 +1,44 @@
+{
+  "kind": "usdc",
+  "year": 2024,
+  "month": 2,
+  "format": "deloitte",
+  "reportDates": [
+    "2024-02-23",
+    "2024-02-29"
+  ],
+  "series": [
+    {
+      "date": "2024-02-23",
+      "circulation": 28062598850,
+      "reserveTotal": 28113374184,
+      "composition": {
+        "treasuries": 9260546767,
+        "repos": 15453000000,
+        "cashInFund": 999305030,
+        "cashAtBanks": 2980618553,
+        "totalReserveFund": 25137784336,
+        "totalOther": 2975589848,
+        "totalReserveAssets": 28113374184
+      }
+    },
+    {
+      "date": "2024-02-29",
+      "circulation": 28683063584,
+      "reserveTotal": 28733994331,
+      "composition": {
+        "treasuries": 10006134453,
+        "repos": 14531000000,
+        "cashInFund": 1003830638,
+        "cashAtBanks": 3301872815,
+        "totalReserveFund": 25437849227,
+        "totalOther": 3296145104,
+        "totalReserveAssets": 28733994331
+      }
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2024-02.pdf",
+  "localPdf": "/pdfs/usdc/2024-02.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2024/2024%20USDC_Examination%20Report%20February%202024.pdf"
+}

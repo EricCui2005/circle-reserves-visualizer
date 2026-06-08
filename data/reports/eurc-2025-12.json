@@ -1,0 +1,36 @@
+{
+  "kind": "eurc",
+  "year": 2025,
+  "month": 12,
+  "format": "deloitte",
+  "reportDates": [
+    "2025-12-26",
+    "2025-12-31"
+  ],
+  "series": [
+    {
+      "date": "2025-12-26",
+      "circulation": 298901215,
+      "reserveTotal": 301651741,
+      "composition": {
+        "treasuries": 0,
+        "repos": 0,
+        "cashInFund": 0,
+        "cashAtBanks": 305495202,
+        "totalReserveFund": null,
+        "totalOther": null,
+        "totalReserveAssets": null
+      }
+    },
+    {
+      "date": "2025-12-31",
+      "circulation": 309608590,
+      "reserveTotal": 312359116,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/eurc/2025-12.pdf",
+  "localPdf": "/pdfs/eurc/2025-12.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/EURC%20Attestations/2025%20EURC_Examination%20Report%20December%2025.pdf"
+}

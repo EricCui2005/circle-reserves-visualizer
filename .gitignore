@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# original source PDF kept locally only; duplicated under public/pdfs/
+/source/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

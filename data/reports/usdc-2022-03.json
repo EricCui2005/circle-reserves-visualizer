@@ -1,0 +1,21 @@
+{
+  "kind": "usdc",
+  "year": 2022,
+  "month": 3,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2022-03-31"
+  ],
+  "series": [
+    {
+      "date": "2022-03-31",
+      "circulation": 51388555903,
+      "reserveTotal": 51388555903,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2022-03.pdf",
+  "localPdf": "/pdfs/usdc/2022-03.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2022/2022%20USDC%20Circle%20Grant%20Thornton%20Report%20March.pdf"
+}

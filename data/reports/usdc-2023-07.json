@@ -1,0 +1,44 @@
+{
+  "kind": "usdc",
+  "year": 2023,
+  "month": 7,
+  "format": "deloitte",
+  "reportDates": [
+    "2023-07-24",
+    "2023-07-31"
+  ],
+  "series": [
+    {
+      "date": "2023-07-24",
+      "circulation": 26624720539,
+      "reserveTotal": 26679340412,
+      "composition": {
+        "treasuries": 8389935085,
+        "repos": 15974000000,
+        "cashInFund": 999045196,
+        "cashAtBanks": 1897890897,
+        "totalReserveFund": 24787777298,
+        "totalOther": 1891563114,
+        "totalReserveAssets": 26679340412
+      }
+    },
+    {
+      "date": "2023-07-31",
+      "circulation": 26407355247,
+      "reserveTotal": 26462068123,
+      "composition": {
+        "treasuries": 5950941505,
+        "repos": 17436000000,
+        "cashInFund": 1004112141,
+        "cashAtBanks": 2196028208,
+        "totalReserveFund": 24287767483,
+        "totalOther": 2174300640,
+        "totalReserveAssets": 26462068123
+      }
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2023-07.pdf",
+  "localPdf": "/pdfs/usdc/2023-07.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2023/2023%20USDC_Circle%20Examination%20Report%20July%202023.pdf"
+}

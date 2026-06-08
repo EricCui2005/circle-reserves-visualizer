@@ -1,0 +1,36 @@
+{
+  "kind": "eurc",
+  "year": 2023,
+  "month": 8,
+  "format": "deloitte",
+  "reportDates": [
+    "2023-08-07",
+    "2023-08-31"
+  ],
+  "series": [
+    {
+      "date": "2023-08-07",
+      "circulation": 49577604,
+      "reserveTotal": 49828709,
+      "composition": {
+        "treasuries": 0,
+        "repos": 0,
+        "cashInFund": 0,
+        "cashAtBanks": 49968844,
+        "totalReserveFund": null,
+        "totalOther": null,
+        "totalReserveAssets": null
+      }
+    },
+    {
+      "date": "2023-08-31",
+      "circulation": 49225433,
+      "reserveTotal": 49476668,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/eurc/2023-08.pdf",
+  "localPdf": "/pdfs/eurc/2023-08.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/Euro%20Coin%20Attestations/2023%20EUROC_Circle%20Examination%20Report%20August%202023.pdf"
+}

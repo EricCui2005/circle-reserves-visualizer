@@ -1,0 +1,44 @@
+{
+  "kind": "usdc",
+  "year": 2023,
+  "month": 12,
+  "format": "deloitte",
+  "reportDates": [
+    "2023-12-06",
+    "2023-12-29"
+  ],
+  "series": [
+    {
+      "date": "2023-12-06",
+      "circulation": 24237841228,
+      "reserveTotal": 24289673354,
+      "composition": {
+        "treasuries": 7176098912,
+        "repos": 15182000000,
+        "cashInFund": 999302178,
+        "cashAtBanks": 1538405052,
+        "totalReserveFund": 22637988964,
+        "totalOther": 1651684390,
+        "totalReserveAssets": 24289673354
+      }
+    },
+    {
+      "date": "2023-12-29",
+      "circulation": 24641390742,
+      "reserveTotal": 24693288222,
+      "composition": {
+        "treasuries": 6622021104,
+        "repos": 14707000000,
+        "cashInFund": 1003858010,
+        "cashAtBanks": 2499849775,
+        "totalReserveFund": 22237963415,
+        "totalOther": 2455324807,
+        "totalReserveAssets": 24693288222
+      }
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2023-12.pdf",
+  "localPdf": "/pdfs/usdc/2023-12.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2023/2023%20USDC_Examination%20Report%20December%202023.pdf"
+}

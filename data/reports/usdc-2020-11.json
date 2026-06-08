@@ -1,0 +1,21 @@
+{
+  "kind": "usdc",
+  "year": 2020,
+  "month": 11,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2020-11-30"
+  ],
+  "series": [
+    {
+      "date": "2020-11-30",
+      "circulation": 3002021340,
+      "reserveTotal": 3004921958,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2020-11.pdf",
+  "localPdf": "/pdfs/usdc/2020-11.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2020/2020%20USDC%20Circle%20Grant%20Thornton%20Report%20November.pdf"
+}

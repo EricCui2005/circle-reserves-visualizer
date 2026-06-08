@@ -1,0 +1,44 @@
+{
+  "kind": "usdc",
+  "year": 2026,
+  "month": 4,
+  "format": "deloitte",
+  "reportDates": [
+    "2026-04-06",
+    "2026-04-30"
+  ],
+  "series": [
+    {
+      "date": "2026-04-06",
+      "circulation": 77745231766,
+      "reserveTotal": 77821343057,
+      "composition": {
+        "treasuries": 25643128238,
+        "repos": 40579500000,
+        "cashInFund": 1000409807,
+        "cashAtBanks": 11085995761,
+        "totalReserveFund": 66467109973,
+        "totalOther": 11354233084,
+        "totalReserveAssets": 77821343057
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "circulation": 77047590794,
+      "reserveTotal": 77123668726,
+      "composition": {
+        "treasuries": 19110672894,
+        "repos": 46998000000,
+        "cashInFund": 1003490334,
+        "cashAtBanks": 10567044499,
+        "totalReserveFund": 66367076329,
+        "totalOther": 10756592397,
+        "totalReserveAssets": 77123668726
+      }
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2026-04.pdf",
+  "localPdf": "/pdfs/usdc/2026-04.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2026/2026%20USDC_Examination%20Report%20April%2026.pdf"
+}

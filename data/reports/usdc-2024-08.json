@@ -1,0 +1,44 @@
+{
+  "kind": "usdc",
+  "year": 2024,
+  "month": 8,
+  "format": "deloitte",
+  "reportDates": [
+    "2024-08-29",
+    "2024-08-30"
+  ],
+  "series": [
+    {
+      "date": "2024-08-29",
+      "circulation": 34521002326,
+      "reserveTotal": 34595053289,
+      "composition": {
+        "treasuries": 8647172626,
+        "repos": 21193000000,
+        "cashInFund": 1000561731,
+        "cashAtBanks": 3830872437,
+        "totalReserveFund": 30788659497,
+        "totalOther": 3806393792,
+        "totalReserveAssets": 34595053289
+      }
+    },
+    {
+      "date": "2024-08-30",
+      "circulation": 34644410354,
+      "reserveTotal": 34718608570,
+      "composition": {
+        "treasuries": 8652208527,
+        "repos": 21266000000,
+        "cashInFund": 1004776763,
+        "cashAtBanks": 3961910997,
+        "totalReserveFund": 30788659497,
+        "totalOther": 3929949073,
+        "totalReserveAssets": 34718608570
+      }
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2024-08.pdf",
+  "localPdf": "/pdfs/usdc/2024-08.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2024/2024%20USDC_Examination%20Report%20August%202024.pdf"
+}

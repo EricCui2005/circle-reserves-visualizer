@@ -1,0 +1,21 @@
+{
+  "kind": "eurc",
+  "year": 2022,
+  "month": 12,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2022-12-31"
+  ],
+  "series": [
+    {
+      "date": "2022-12-31",
+      "circulation": 24905662,
+      "reserveTotal": 24905662,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/eurc/2022-12.pdf",
+  "localPdf": "/pdfs/eurc/2022-12.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2022%20EUROC_Circle%20Examination%20Report%20December%202022.pdf"
+}

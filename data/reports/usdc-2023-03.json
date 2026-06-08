@@ -1,0 +1,29 @@
+{
+  "kind": "usdc",
+  "year": 2023,
+  "month": 3,
+  "format": "deloitte",
+  "reportDates": [
+    "2023-03-06"
+  ],
+  "series": [
+    {
+      "date": "2023-03-06",
+      "circulation": 43744257742,
+      "reserveTotal": 43799077411,
+      "composition": {
+        "treasuries": 38533882466,
+        "repos": 0,
+        "cashInFund": 191081592,
+        "cashAtBanks": 11504218977,
+        "totalReserveFund": 32366463626,
+        "totalOther": 11432613785,
+        "totalReserveAssets": 43799077411
+      }
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2023-03.pdf",
+  "localPdf": "/pdfs/usdc/2023-03.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2023/2023%20USDC_Circle%20Examination%20Report%20March%202023.pdf"
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "eurc",
+  "year": 2024,
+  "month": 11,
+  "format": "deloitte",
+  "reportDates": [
+    "2024-11-27",
+    "2024-11-29"
+  ],
+  "series": [
+    {
+      "date": "2024-11-27",
+      "circulation": 86628745,
+      "reserveTotal": 87379254,
+      "composition": null
+    },
+    {
+      "date": "2024-11-29",
+      "circulation": 87759186,
+      "reserveTotal": 88509695,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/eurc/2024-11.pdf",
+  "localPdf": "/pdfs/eurc/2024-11.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/EURC%20Attestations/2024%20EURC_Examination%20Report%20November%202024.pdf"
+}

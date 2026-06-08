@@ -1,0 +1,21 @@
+{
+  "kind": "usdc",
+  "year": 2020,
+  "month": 1,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2020-01-31"
+  ],
+  "series": [
+    {
+      "date": "2020-01-31",
+      "circulation": 440715490,
+      "reserveTotal": 440780676,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2020-01.pdf",
+  "localPdf": "/pdfs/usdc/2020-01.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2020/2020%20USDC%20Circle%20Grant%20Thornton%20Report%20January.pdf"
+}

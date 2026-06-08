@@ -1,0 +1,44 @@
+{
+  "kind": "usdc",
+  "year": 2025,
+  "month": 7,
+  "format": "deloitte",
+  "reportDates": [
+    "2025-07-08",
+    "2025-07-31"
+  ],
+  "series": [
+    {
+      "date": "2025-07-08",
+      "circulation": 61801685654,
+      "reserveTotal": 61866954359,
+      "composition": {
+        "treasuries": 24316404371,
+        "repos": 31382500000,
+        "cashInFund": 1000543889,
+        "cashAtBanks": 8370827322,
+        "totalReserveFund": 53664876542,
+        "totalOther": 8202077817,
+        "totalReserveAssets": 61866954359
+      }
+    },
+    {
+      "date": "2025-07-31",
+      "circulation": 63935611557,
+      "reserveTotal": 64000903241,
+      "composition": {
+        "treasuries": 18890847168,
+        "repos": 35514000000,
+        "cashInFund": 1003751262,
+        "cashAtBanks": 8850709405,
+        "totalReserveFund": 55214899587,
+        "totalOther": 8786003654,
+        "totalReserveAssets": 64000903241
+      }
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2025-07.pdf",
+  "localPdf": "/pdfs/usdc/2025-07.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2025/2025%20USDC_Examination%20Report%20July%2025.pdf"
+}

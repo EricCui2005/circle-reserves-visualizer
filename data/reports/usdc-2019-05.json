@@ -1,0 +1,21 @@
+{
+  "kind": "usdc",
+  "year": 2019,
+  "month": 5,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2019-05-31"
+  ],
+  "series": [
+    {
+      "date": "2019-05-31",
+      "circulation": 333854877,
+      "reserveTotal": 333887466,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2019-05.pdf",
+  "localPdf": "/pdfs/usdc/2019-05.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2019/2019%20USDC%20Circle%20Grant%20Thornton%20Report%20May.pdf"
+}

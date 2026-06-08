@@ -1,0 +1,21 @@
+{
+  "kind": "usdc",
+  "year": 2018,
+  "month": 12,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2018-12-31"
+  ],
+  "series": [
+    {
+      "date": "2018-12-31",
+      "circulation": 251211148,
+      "reserveTotal": 251211209,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2018-12.pdf",
+  "localPdf": "/pdfs/usdc/2018-12.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2018/2018%20USDC%20Circle%20Grant%20Thornton%20Report%20December.pdf"
+}

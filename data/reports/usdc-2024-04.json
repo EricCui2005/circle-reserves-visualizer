@@ -1,0 +1,44 @@
+{
+  "kind": "usdc",
+  "year": 2024,
+  "month": 4,
+  "format": "deloitte",
+  "reportDates": [
+    "2024-04-05",
+    "2024-04-30"
+  ],
+  "series": [
+    {
+      "date": "2024-04-05",
+      "circulation": 32841199161,
+      "reserveTotal": 32892349501,
+      "composition": {
+        "treasuries": 12848297457,
+        "repos": 16675000000,
+        "cashInFund": 1000608005,
+        "cashAtBanks": 3761817829,
+        "totalReserveFund": 29138159340,
+        "totalOther": 3754190161,
+        "totalReserveAssets": 32892349501
+      }
+    },
+    {
+      "date": "2024-04-30",
+      "circulation": 33028099172,
+      "reserveTotal": 33079391140,
+      "composition": {
+        "treasuries": 10377675993,
+        "repos": 18732000000,
+        "cashInFund": 1005142023,
+        "cashAtBanks": 3126173077,
+        "totalReserveFund": 29988203128,
+        "totalOther": 3091188012,
+        "totalReserveAssets": 33079391140
+      }
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2024-04.pdf",
+  "localPdf": "/pdfs/usdc/2024-04.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2024/2024%20USDC_Examination%20Report%20April%202024.pdf"
+}

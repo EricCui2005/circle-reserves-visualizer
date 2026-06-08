@@ -1,0 +1,36 @@
+{
+  "kind": "eurc",
+  "year": 2023,
+  "month": 11,
+  "format": "deloitte",
+  "reportDates": [
+    "2023-11-16",
+    "2023-11-30"
+  ],
+  "series": [
+    {
+      "date": "2023-11-16",
+      "circulation": 51492673,
+      "reserveTotal": 51743779,
+      "composition": {
+        "treasuries": 0,
+        "repos": 0,
+        "cashInFund": 0,
+        "cashAtBanks": 51743776,
+        "totalReserveFund": null,
+        "totalOther": null,
+        "totalReserveAssets": null
+      }
+    },
+    {
+      "date": "2023-11-30",
+      "circulation": 51397804,
+      "reserveTotal": 51649035,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/eurc/2023-11.pdf",
+  "localPdf": "/pdfs/eurc/2023-11.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/Euro%20Coin%20Attestations/2023%20EURC_Circle%20Examination%20Report%20November%202023.pdf"
+}

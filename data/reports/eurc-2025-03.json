@@ -1,0 +1,28 @@
+{
+  "kind": "eurc",
+  "year": 2025,
+  "month": 3,
+  "format": "deloitte",
+  "reportDates": [
+    "2025-03-19",
+    "2025-03-31"
+  ],
+  "series": [
+    {
+      "date": "2025-03-19",
+      "circulation": 131368585,
+      "reserveTotal": 132119102,
+      "composition": null
+    },
+    {
+      "date": "2025-03-31",
+      "circulation": 170726017,
+      "reserveTotal": 171476538,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/eurc/2025-03.pdf",
+  "localPdf": "/pdfs/eurc/2025-03.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/EURC%20Attestations/2025%20EURC_Examination%20Report%20March%2025.pdf"
+}

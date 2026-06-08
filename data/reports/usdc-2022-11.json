@@ -1,0 +1,21 @@
+{
+  "kind": "usdc",
+  "year": 2022,
+  "month": 11,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2022-11-30"
+  ],
+  "series": [
+    {
+      "date": "2022-11-30",
+      "circulation": 43238943390,
+      "reserveTotal": 43404329767,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2022-11.pdf",
+  "localPdf": "/pdfs/usdc/2022-11.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2022/2022%20USDC%20Circle%20Grant%20Thornton%20Report%20November.pdf"
+}

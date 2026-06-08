@@ -1,0 +1,21 @@
+{
+  "kind": "usdc",
+  "year": 2021,
+  "month": 12,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2021-12-31"
+  ],
+  "series": [
+    {
+      "date": "2021-12-31",
+      "circulation": 42416160651,
+      "reserveTotal": 42416160651,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2021-12.pdf",
+  "localPdf": "/pdfs/usdc/2021-12.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2021/2021%20USDC%20Circle%20Grant%20Thornton%20Report%20December.pdf"
+}

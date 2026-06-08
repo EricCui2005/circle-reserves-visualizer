@@ -1,0 +1,21 @@
+{
+  "kind": "usdc",
+  "year": 2022,
+  "month": 12,
+  "format": "grant-thornton",
+  "reportDates": [
+    "2022-12-31"
+  ],
+  "series": [
+    {
+      "date": "2022-12-31",
+      "circulation": 44553543212,
+      "reserveTotal": 44693963701,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2022-12.pdf",
+  "localPdf": "/pdfs/usdc/2022-12.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2022/2022%20USDC%20Circle%20Grant%20Thornton%20Report%20December.pdf"
+}
