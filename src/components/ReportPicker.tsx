@@ -37,7 +37,7 @@ export function ReportPicker({ kind, reports }: Props) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-2 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="flex flex-col gap-2 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none dark:ring-1 dark:ring-white/5">
         <label
           htmlFor="report-select"
           className="text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400"

@@ -106,7 +106,7 @@ export function CompositionTimeseries({ kind, reports }: Props) {
   const isPercent = mode === "percent";
 
   return (
-    <section className="flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+    <section className="flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none dark:ring-1 dark:ring-white/5">
       <header className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -119,7 +119,7 @@ export function CompositionTimeseries({ kind, reports }: Props) {
         <div
           role="tablist"
           aria-label="Scale"
-          className="inline-flex rounded-lg border border-zinc-200 bg-zinc-100 p-1 dark:border-zinc-800 dark:bg-zinc-900"
+          className="inline-flex rounded-lg border border-zinc-200 bg-zinc-100 p-1 dark:border-zinc-700 dark:bg-zinc-800"
         >
           {(["absolute", "percent"] as const).map((m) => {
             const active = m === mode;
@@ -132,7 +132,7 @@ export function CompositionTimeseries({ kind, reports }: Props) {
                 onClick={() => setMode(m)}
                 className={`min-w-[88px] rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
                   active
-                    ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-950 dark:text-zinc-50"
+                    ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-700 dark:text-zinc-50"
                     : "text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
                 }`}
               >

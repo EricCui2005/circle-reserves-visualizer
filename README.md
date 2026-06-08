@@ -51,6 +51,14 @@ node scripts/build-index.mjs   # regenerate src/data/reports/index.ts
 One PDF (`usdc/2022-05.pdf`) uses a custom font encoding that `pdftotext`
 cannot decode; values are hard-coded as a manual override in `parse.mjs`.
 
+## Trademarks
+
+"Circle", the Circle logo, "USDC", and "EURC" are trademarks of Circle
+Internet Financial, LLC. This project is an independent, non-commercial
+visualization of publicly available examination reports and is not
+affiliated with or endorsed by Circle. Logos shipped under `public/logos/`
+are used for identification purposes only.
+
 ## Deploy
 
 Designed for Vercel. The PDFs live under `public/` and ship as CDN static

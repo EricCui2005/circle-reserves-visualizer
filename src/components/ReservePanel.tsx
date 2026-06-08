@@ -93,7 +93,7 @@ export function ReservePanel({
   const tokenLabel = kind === "eurc" ? "EURC" : "USDC";
 
   return (
-    <section className="flex flex-col rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+    <section className="flex flex-col rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none dark:ring-1 dark:ring-white/5">
       <header className="mb-4">
         <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
           {longDate.format(new Date(`${date}T00:00:00Z`))}
