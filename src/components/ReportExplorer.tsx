@@ -1,0 +1,70 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import { CompositionTimeseries } from "@/components/CompositionTimeseries";
+import { ReportPicker } from "@/components/ReportPicker";
+import type { Kind, Report } from "@/data/reports";
+
+const hasComposition = (r: Report) =>
+  r.series.some((s) => s.composition !== null);
+
+type Props = {
+  usdcReports: Report[];
+  eurcReports: Report[];
+};
+
+export function ReportExplorer({ usdcReports, eurcReports }: Props) {
+  const sources: Record<Kind, Report[]> = useMemo(
+    () => ({
+      usdc: [...usdcReports]
+        .filter(hasComposition)
+        .sort((a, b) => b.year - a.year || b.month - a.month),
+      eurc: [...eurcReports]
+        .filter(hasComposition)
+        .sort((a, b) => b.year - a.year || b.month - a.month),
+    }),
+    [usdcReports, eurcReports],
+  );
+
+  const [kind, setKind] = useState<Kind>("usdc");
+  const reports = sources[kind];
+
+  return (
+    <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-2">
+        <span className="text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+          Token
+        </span>
+        <div
+          role="tablist"
+          aria-label="Token"
+          className="inline-flex w-fit rounded-lg border border-zinc-200 bg-zinc-100 p-1 dark:border-zinc-800 dark:bg-zinc-900"
+        >
+          {(["usdc", "eurc"] as const).map((k) => {
+            const active = k === kind;
+            return (
+              <button
+                key={k}
+                role="tab"
+                aria-selected={active}
+                type="button"
+                onClick={() => setKind(k)}
+                className={`min-w-[72px] rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                  active
+                    ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-950 dark:text-zinc-50"
+                    : "text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
+                }`}
+              >
+                {k.toUpperCase()}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <CompositionTimeseries kind={kind} reports={reports} />
+
+      <ReportPicker kind={kind} reports={reports} />
+    </div>
+  );
+}

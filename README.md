@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Circle Reserve Visualizer
 
-## Getting Started
+Interactive visualization of every published USDC and EURC reserve attestation
+from Circle's transparency page. Parses the third-party examination PDFs
+(Grant Thornton 2018–2022, Deloitte 2023–present) into a typed dataset and
+renders:
 
-First, run the development server:
+- a stacked area chart of reserve composition over time, and
+- a per-report pie breakdown with a date selector.
+
+## Stack
+
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS
+- recharts
+- `pdftotext` (poppler-utils) for PDF extraction
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app is fully static; `npm run build` produces a deploy that needs no
+runtime data fetching.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Dataset
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `public/pdfs/{usdc,eurc}/<YYYY-MM>.pdf` — source PDFs (also served at
+  `/pdfs/...` so each report links to its own examination report).
+- `data/reports/<kind>-<YYYY-MM>.json` — one parsed report per PDF.
+- `src/data/reports/index.ts` — auto-generated typed index that
+  statically imports every JSON.
 
-## Learn More
+Each report contains one or two attestation dates with circulation, total
+reserve assets, and (for the Deloitte era) composition broken into
+short-term Treasuries, repos, cash in the Circle Reserve Fund, and cash at
+regulated FIs.
 
-To learn more about Next.js, take a look at the following resources:
+### Refreshing the dataset
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# 1. List every PDF URL on https://www.circle.com/transparency
+#    into /tmp/pdf_urls.txt, one per line.
+node scripts/download.mjs      # download missing PDFs into public/pdfs/
+node scripts/parse.mjs         # parse PDFs -> data/reports/*.json
+node scripts/build-index.mjs   # regenerate src/data/reports/index.ts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+One PDF (`usdc/2022-05.pdf`) uses a custom font encoding that `pdftotext`
+cannot decode; values are hard-coded as a manual override in `parse.mjs`.
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Designed for Vercel. The PDFs live under `public/` and ship as CDN static
+assets, so source links keep working even if Circle reorganizes their site.

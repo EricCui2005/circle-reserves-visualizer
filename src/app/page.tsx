@@ -1,4 +1,4 @@
-import { ReportPicker } from "@/components/ReportPicker";
+import { ReportExplorer } from "@/components/ReportExplorer";
 import { usdcReports, eurcReports } from "@/data/reports";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
           </p>
         </header>
 
-        <ReportPicker
+        <ReportExplorer
           usdcReports={usdcReports}
           eurcReports={eurcReports}
         />
