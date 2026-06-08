@@ -41,8 +41,7 @@ regulated FIs.
 ### Refreshing the dataset
 
 ```bash
-# 1. List every PDF URL on https://www.circle.com/transparency
-#    into /tmp/pdf_urls.txt, one per line.
+node scripts/scrape-circle.mjs # write PDF URLs to /tmp/pdf_urls.txt
 node scripts/download.mjs      # download missing PDFs into public/pdfs/
 node scripts/parse.mjs         # parse PDFs -> data/reports/*.json
 node scripts/build-index.mjs   # regenerate src/data/reports/index.ts
@@ -50,6 +49,21 @@ node scripts/build-index.mjs   # regenerate src/data/reports/index.ts
 
 One PDF (`usdc/2022-05.pdf`) uses a custom font encoding that `pdftotext`
 cannot decode; values are hard-coded as a manual override in `parse.mjs`.
+
+### Daily refresh (GitHub Actions)
+
+`.github/workflows/refresh-reports.yml` runs the four-step pipeline above
+every day at 12:00 UTC, commits any new reports to `main` (which triggers
+a Vercel rebuild), and emails a status digest to the owner. Three outcomes
+are possible: "no new reports", "new report(s) found and committed", or
+"refresh failed". Manual runs are available via the Actions tab.
+
+The email step uses Gmail SMTP and requires two repository secrets:
+
+| Secret          | Value                                                  |
+| --------------- | ------------------------------------------------------ |
+| `SMTP_USERNAME` | The Gmail address that sends the digest                |
+| `SMTP_PASSWORD` | A [Google App Password](https://myaccount.google.com/apppasswords) for that account |
 
 ## Trademarks
 

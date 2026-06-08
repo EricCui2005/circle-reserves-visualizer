@@ -1,0 +1,170 @@
+name: Refresh Reserve Reports
+
+# Daily scrape of Circle's transparency page. If new PDFs appear, download +
+# parse + commit them back to main (which triggers a Vercel rebuild). Always
+# ends by emailing a status digest to the owner.
+
+on:
+  schedule:
+    # 12:00 UTC every day. GitHub Actions cron is UTC; no DST.
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+# Only one refresh in flight at a time, so a manual dispatch can't race the
+# scheduled run to push to main.
+concurrency:
+  group: refresh-reports
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # persist-credentials lets the later `git push` reuse the default
+          # GITHUB_TOKEN — no PAT required.
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install poppler-utils (pdftotext)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scrape Circle transparency page
+        run: node scripts/scrape-circle.mjs
+
+      - name: Download new PDFs
+        run: node scripts/download.mjs
+
+      - name: Parse PDFs to JSON
+        run: node scripts/parse.mjs
+
+      - name: Rebuild typed reports index
+        run: node scripts/build-index.mjs
+
+      - name: Detect changes and stage
+        id: diff
+        run: |
+          git add public/pdfs data/reports src/data/reports
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes detected."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --cached --name-only > /tmp/changed_files.txt
+            echo "Changed files:"
+            cat /tmp/changed_files.txt
+          fi
+
+      - name: Commit and push
+        id: commit
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          added=$(grep -E '^data/reports/.*\.json$' /tmp/changed_files.txt \
+            | sed -E 's#data/reports/##; s#\.json$##' \
+            | sort -u | paste -sd ', ' -)
+          if [ -z "$added" ]; then
+            added="(manifest/index only)"
+          fi
+          git commit -m "chore(reports): refresh reserve data ($added)"
+          git push origin HEAD:main
+          echo "added=$added" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Build email body
+        id: email
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          CHANGED: ${{ steps.diff.outputs.changed }}
+          ADDED: ${{ steps.commit.outputs.added }}
+          SHA: ${{ steps.commit.outputs.sha }}
+        run: |
+          set -u
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          if [ "$JOB_STATUS" != "success" ]; then
+            SUBJECT="[Circle Reserves] ERROR — daily refresh failed"
+            read -r -d '' BODY <<EOF || true
+          The daily Circle reserve refresh FAILED.
+
+          Run log:
+            $RUN_URL
+
+          Common causes:
+            - Scraper found 0 PDFs (Circle page structure may have changed)
+            - Parse error on a new PDF (e.g. unsupported font encoding)
+            - SMTP secrets not configured
+
+          The site was NOT updated.
+          EOF
+          elif [ "$CHANGED" = "true" ]; then
+            COMMIT_URL="${{ github.server_url }}/${{ github.repository }}/commit/$SHA"
+            SUBJECT="[Circle Reserves] new report(s): $ADDED"
+            read -r -d '' BODY <<EOF || true
+          The daily Circle reserve refresh found new data.
+
+          Added reports:
+            $ADDED
+
+          Commit:
+            $COMMIT_URL
+
+          Run log:
+            $RUN_URL
+
+          Your Vercel deployment will rebuild automatically from this commit.
+          EOF
+          else
+            SUBJECT="[Circle Reserves] daily check — no new reports"
+            read -r -d '' BODY <<EOF || true
+          The daily Circle reserve refresh ran successfully.
+
+            No new attestation reports found.
+
+          Run log:
+            $RUN_URL
+          EOF
+          fi
+
+          # Emit subject + multiline body via the canonical GH Actions heredoc
+          # output syntax so they're available to the email step.
+          DELIM="EOF_$(uuidgen)"
+          {
+            echo "subject=$SUBJECT"
+            echo "body<<$DELIM"
+            echo "$BODY"
+            echo "$DELIM"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Send status email
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          from: Circle Reserves Bot <${{ secrets.SMTP_USERNAME }}>
+          to: ericcui.use@gmail.com
+          subject: ${{ steps.email.outputs.subject }}
+          body: ${{ steps.email.outputs.body }}
