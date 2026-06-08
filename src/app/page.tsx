@@ -11,13 +11,18 @@ export default function Home() {
             <Image
               src="/logos/circle.svg"
               alt="Circle"
-              width={28}
-              height={28}
+              width={120}
+              height={30}
               priority
-              className="h-7 w-7"
+              unoptimized
+              className="h-7 w-auto"
+            />
+            <span
+              aria-hidden
+              className="h-5 w-px bg-zinc-300 dark:bg-zinc-700"
             />
             <p className="text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
-              Circle Reserve Composition
+              Reserve Composition
             </p>
           </div>
           <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
