@@ -115,7 +115,7 @@ export function ReservePanel({
               innerRadius={60}
               outerRadius={110}
               paddingAngle={0}
-              cornerRadius={4}
+              cornerRadius={0}
               stroke="none"
               isAnimationActive={false}
             >
