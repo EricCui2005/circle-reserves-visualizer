@@ -22,6 +22,13 @@ export const metadata: Metadata = {
     "Every published USDC and EURC reserve attestation, parsed and visualized.",
 };
 
+// Runs synchronously before paint to avoid a flash of the wrong theme.
+const themeInit = `try{
+  var t = localStorage.getItem('theme');
+  if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  if (t === 'dark') document.documentElement.classList.add('dark');
+}catch(e){}`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,7 +38,11 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      </head>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );

@@ -63,6 +63,23 @@ const longDate = new Intl.DateTimeFormat("en-US", {
   timeZone: "UTC",
 });
 
+// Mix a hex color toward white (positive pct) or toward black (negative pct).
+function shade(hex: string, pct: number): string {
+  const n = parseInt(hex.slice(1), 16);
+  const r = (n >> 16) & 0xff;
+  const g = (n >> 8) & 0xff;
+  const b = n & 0xff;
+  const mix = (c: number) =>
+    pct >= 0
+      ? Math.round(c + (255 - c) * (pct / 100))
+      : Math.round(c * (1 + pct / 100));
+  const out =
+    (Math.min(255, Math.max(0, mix(r))) << 16) |
+    (Math.min(255, Math.max(0, mix(g))) << 8) |
+    Math.min(255, Math.max(0, mix(b)));
+  return `#${out.toString(16).padStart(6, "0")}`;
+}
+
 type Props = {
   kind: Kind;
   date: string;
@@ -91,6 +108,8 @@ export function ReservePanel({
   const sliceTotal = slices.reduce((sum, s) => sum + s.value, 0);
   const excess = reserveTotal - circulation;
   const tokenLabel = kind === "eurc" ? "EURC" : "USDC";
+  const uid = `${kind}-${date}`;
+  const shadowId = `pie-shadow-${uid}`;
 
   return (
     <section className="flex flex-col rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none dark:ring-1 dark:ring-white/5">
@@ -106,6 +125,42 @@ export function ReservePanel({
       <div className="h-72">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
+            <defs>
+              {slices.map((s) => {
+                const id = `grad-${uid}-${s.key}`;
+                return (
+                  <radialGradient
+                    key={id}
+                    id={id}
+                    cx="50%"
+                    cy="50%"
+                    r="65%"
+                    fx="50%"
+                    fy="35%"
+                  >
+                    <stop offset="0%" stopColor={shade(s.color, 22)} />
+                    <stop offset="100%" stopColor={shade(s.color, -8)} />
+                  </radialGradient>
+                );
+              })}
+              <filter
+                id={shadowId}
+                x="-25%"
+                y="-25%"
+                width="150%"
+                height="150%"
+              >
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+                <feOffset dx="0" dy="4" result="off" />
+                <feComponentTransfer>
+                  <feFuncA type="linear" slope="0.25" />
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
             <Pie
               data={slices}
               dataKey="value"
@@ -114,11 +169,17 @@ export function ReservePanel({
               cy="50%"
               innerRadius={60}
               outerRadius={110}
-              paddingAngle={1}
+              paddingAngle={0}
+              cornerRadius={4}
               stroke="none"
+              filter={`url(#${shadowId})`}
+              isAnimationActive={false}
             >
               {slices.map((s) => (
-                <Cell key={s.key} fill={s.color} />
+                <Cell
+                  key={s.key}
+                  fill={`url(#grad-${uid}-${s.key})`}
+                />
               ))}
             </Pie>
             <Tooltip

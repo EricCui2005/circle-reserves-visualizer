@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ReportExplorer } from "@/components/ReportExplorer";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { usdcReports, eurcReports } from "@/data/reports";
 
 export default function Home() {
@@ -7,23 +8,26 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-100 px-6 py-12 font-sans dark:bg-zinc-950">
       <main className="mx-auto flex max-w-6xl flex-col gap-8">
         <header className="flex flex-col gap-3">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/logos/circle.svg"
-              alt="Circle"
-              width={120}
-              height={30}
-              priority
-              unoptimized
-              className="h-7 w-auto"
-            />
-            <span
-              aria-hidden
-              className="h-5 w-px bg-zinc-300 dark:bg-zinc-700"
-            />
-            <p className="text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
-              Reserve Composition
-            </p>
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logos/circle.svg"
+                alt="Circle"
+                width={120}
+                height={30}
+                priority
+                unoptimized
+                className="h-7 w-auto"
+              />
+              <span
+                aria-hidden
+                className="h-5 w-px bg-zinc-300 dark:bg-zinc-700"
+              />
+              <p className="text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+                Reserve Composition
+              </p>
+            </div>
+            <ThemeToggle />
           </div>
           <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
             USDC &amp; EURC reserve attestations
