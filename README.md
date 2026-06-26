@@ -1,5 +1,7 @@
 # Circle Reserve Visualizer
 
+**Live site:** https://circle-reserves-visualizer.vercel.app/
+
 Interactive visualization of every published USDC and EURC reserve attestation
 from Circle's transparency page. Parses the third-party examination PDFs
 (Grant Thornton 2018–2022, Deloitte 2023–present) into a typed dataset and
@@ -75,5 +77,7 @@ are used for identification purposes only.
 
 ## Deploy
 
-Designed for Vercel. The PDFs live under `public/` and ship as CDN static
-assets, so source links keep working even if Circle reorganizes their site.
+Deployed on Vercel at https://circle-reserves-visualizer.vercel.app/. The
+PDFs live under `public/` and ship as CDN static assets, so source links
+keep working even if Circle reorganizes their site. Auto-rebuilds on every
+push to `main`, including the daily commits from the refresh workflow.
