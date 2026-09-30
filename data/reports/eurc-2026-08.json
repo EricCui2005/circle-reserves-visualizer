@@ -1,0 +1,36 @@
+{
+  "kind": "eurc",
+  "year": 2026,
+  "month": 8,
+  "format": "deloitte",
+  "reportDates": [
+    "2026-08-11",
+    "2026-08-31"
+  ],
+  "series": [
+    {
+      "date": "2026-08-11",
+      "circulation": 395563185,
+      "reserveTotal": 398313800,
+      "composition": {
+        "treasuries": 0,
+        "repos": 0,
+        "cashInFund": 0,
+        "cashAtBanks": 400540572,
+        "totalReserveFund": null,
+        "totalOther": null,
+        "totalReserveAssets": null
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "circulation": 390534293,
+      "reserveTotal": 393284908,
+      "composition": null
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/eurc/2026-08.pdf",
+  "localPdf": "/pdfs/eurc/2026-08.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/EURC%20Attestations/2026%20EURC_Examination%20Report%20August%2026.pdf"
+}
