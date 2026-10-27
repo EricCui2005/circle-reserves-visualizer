@@ -408,6 +408,14 @@
     "url": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/EURC%20Attestations/2026%20EURC_Examination%20Report%20August%2026.pdf"
   },
   {
+    "kind": "eurc",
+    "year": "2026",
+    "month": "09",
+    "key": "2026-09",
+    "originalFile": "2026 EURC_Examination Report September 26",
+    "url": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/EURC%20Attestations/2026%20EURC_Examination%20Report%20September%2026.pdf"
+  },
+  {
     "kind": "usdc",
     "year": "2018",
     "month": "10",
@@ -1166,5 +1174,13 @@
     "key": "2026-08",
     "originalFile": "2026 USDC_Examination Report August 26",
     "url": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2026/2026%20USDC_Examination%20Report%20August%2026.pdf"
+  },
+  {
+    "kind": "usdc",
+    "year": "2026",
+    "month": "09",
+    "key": "2026-09",
+    "originalFile": "2026 USDC_Examination Report September 26",
+    "url": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2026/2026%20USDC_Examination%20Report%20September%2026.pdf"
   }
 ]
