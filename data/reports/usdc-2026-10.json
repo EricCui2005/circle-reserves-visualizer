@@ -1,0 +1,44 @@
+{
+  "kind": "usdc",
+  "year": 2026,
+  "month": 10,
+  "format": "deloitte",
+  "reportDates": [
+    "2026-10-23",
+    "2026-10-30"
+  ],
+  "series": [
+    {
+      "date": "2026-10-23",
+      "circulation": 71551284560,
+      "reserveTotal": 71629188599,
+      "composition": {
+        "treasuries": 24079458876,
+        "repos": 36910000000,
+        "cashInFund": 1000105547,
+        "cashAtBanks": 8848169612,
+        "totalReserveFund": 60767503256,
+        "totalOther": 10861685343,
+        "totalReserveAssets": 71629188599
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "circulation": 70453807800,
+      "reserveTotal": 70531865375,
+      "composition": {
+        "treasuries": 25400521275,
+        "repos": 32442000000,
+        "cashInFund": 1003464665,
+        "cashAtBanks": 10631263017,
+        "totalReserveFund": 58967656236,
+        "totalOther": 11564209139,
+        "totalReserveAssets": 70531865375
+      }
+    }
+  ],
+  "warnings": [],
+  "sourcePdf": "public/pdfs/usdc/2026-10.pdf",
+  "localPdf": "/pdfs/usdc/2026-10.pdf",
+  "sourceUrl": "https://6778953.fs1.hubspotusercontent-na1.net/hubfs/6778953/USDCAttestationReports/2026/2026%20USDC_Examination%20Report%20October%2026.pdf"
+}
